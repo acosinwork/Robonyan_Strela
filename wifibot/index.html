@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Igor Fonseca Albuquerque">
+	<title>Control interface</title>
+	<script src="jquery.js"></script>
+	<script src="myscript.js"></script>
+
+</head>
+
+<body>
+
+	<div id="main">
+
+		<div id="video_and_audio" style="position: absolute; top: 50px; width:25%">
+
+			<form name="myform" action="" method="GET">
+				IP Webcam (IP):
+				<input type="text" name="inputbox" value="192.168.10.82">
+				<input type="button" name="button1" value="Load" onClick="readUrlAV(this.form)">
+			</form>
+
+			<object id="video" type="text/html" data="http://192.168.10.82:8080/video"
+				style="position: absolute; width:100%; height:480px;">
+			</object>
+
+			<object id="audio" type="text/html" data="http://192.168.10.82:8080/audio.opus"
+				style="position: absolute; width:388px; height:30px; left:8px; top:425px;">
+			</object>
+
+		</div>
+
+		<div id="commands" style="position: absolute; top: 50px; left:35%; width:65%">
+
+			<form name="myform2" action="" method="GET">
+				Arduino IP Address:
+				<input type="text" name="inputbox" Value="192.168.10.107">
+				<input type="button" name="button3" Value="Test" onClick="testarArduino(this.form)">
+			</form>
+
+			<img src="images/keyboard.png" style="margin-left:100px; margin-top:50px;">
+			<h4> Press and hold keyboard arrow keys to move the robot </h4>
+
+
+	</div>
+</body>
+</html>
