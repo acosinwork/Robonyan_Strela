@@ -53,7 +53,7 @@ void setup()
 
   sendData("AT+RST\r\n", 2000, DEBUG); //reset module
   sendData("AT+CWMODE=1\r\n", 1000, DEBUG); //set station mode
-  sendData("AT+CWJAP=\"Amperka.ru\",\"mega2560\"\r\n", 2000, DEBUG); //connect wi-fi network
+  sendData("AT+CWJAP=\"Amperka.ru\",\"xxxx\"\r\n", 2000, DEBUG); //connect wi-fi network
   while (!Serial1.find("OK")) { //wait for connection
   }
   sendData("AT+CIFSR\r\n", 1000, DEBUG); //show IP address
